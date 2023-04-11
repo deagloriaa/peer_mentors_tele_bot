@@ -26,10 +26,11 @@ Available commands:
 /start -> Welcome message
 /help -> Available commands
 /motd -> Message of the day
-/talktome -> Schedule a session with a Peer Mentor
+/talktopm -> Schedule a session with a Peer Mentor
 /counselling -> Schedule a session with our Counsellors
 /swc -> Introduction to Student Wellness Center
 /info -> SIM Peer Mentors' contact and information
+/livechat -> 
         """
     )
 
@@ -62,7 +63,7 @@ def motd(update, context):
     update.message.reply_text(random.choice(messages))
 
 
-def talktome(update, context):
+def talktopm(update, context):
     update.message.reply_text(""" 
     To schedule a session with a Peer Mentor, please fill this form: 
 https://forms.office.com/Pages/ResponsePage.aspx?id=T8GRqvmA60KWcB1aN1SmltFiaLzrC_lGs8r6PdB0ArFUM0NRME1LVFM4SDk3TUVETjZTVEQ3RE8wSS4u&origin=QRCode
@@ -95,14 +96,22 @@ For further enquiries:
 \U0001F4E9 Email: simpeermentors@sim.edu.sg
     """)
 
+def livechat(update, context):
+    update.message.reply_text(""" 
+    Note: 
+- Any messages beyond our operating time (1-5 PM on weekdays) will not be responded.
+- All messages in this conversation will be kept for training purposes.
+    """)
 
 dispatcher.add_handler(telegram.ext.CommandHandler('start',start))
 dispatcher.add_handler(telegram.ext.CommandHandler('help',help))
 dispatcher.add_handler(telegram.ext.CommandHandler('motd',motd))
-dispatcher.add_handler(telegram.ext.CommandHandler('talktome',talktome))
+dispatcher.add_handler(telegram.ext.CommandHandler('talktopm',talktopm))
 dispatcher.add_handler(telegram.ext.CommandHandler('counselling',counselling))
 dispatcher.add_handler(telegram.ext.CommandHandler('swc',swc))
 dispatcher.add_handler(telegram.ext.CommandHandler('info',info))
+dispatcher.add_handler(telegram.ext.CommandHandler('livechat',livechat))
 
 updater.start_polling()
+
 updater.idle()
