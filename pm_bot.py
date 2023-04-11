@@ -30,7 +30,7 @@ Available commands:
 /counselling -> Schedule a session with our Counsellors
 /swc -> Introduction to Student Wellness Center
 /info -> SIM Peer Mentors' contact and information
-/livechat -> 
+/livechat -> Talk to SIM Peer Mentors (1-5 PM Weekdays only)
         """
     )
 
