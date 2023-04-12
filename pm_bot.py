@@ -99,8 +99,8 @@ For further enquiries:
 def livechat(update, context):
     update.message.reply_text(""" 
     Note: 
-- Any messages beyond our operating time (1-5 PM on weekdays) will not be responded.
-- All messages in this conversation will be kept for training purposes.
+1. Any messages beyond our operating time (1-5 PM on weekdays) will not be responded.
+2. Please keep the chat a safe environment discussion. Bad words (such as cursing) will not be tolerated.
     """)
 
 dispatcher.add_handler(telegram.ext.CommandHandler('start',start))
