@@ -101,6 +101,8 @@ def livechat(update, context):
     Note: 
 1. Any messages beyond our operating time (1-5 PM on weekdays) will not be responded.
 2. Please keep the chat a safe environment discussion. Bad words (such as cursing) will not be tolerated.
+
+If you wish to continue with the chat, type Hi!
     """)
 
 dispatcher.add_handler(telegram.ext.CommandHandler('start',start))
